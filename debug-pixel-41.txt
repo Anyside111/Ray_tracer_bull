@@ -1,0 +1,20 @@
+debug pixel: x = 350; y = 360
+cast ray: end = 0 1 4; dir = 0.064399 0.0127987 -0.997842
+intersect test with obj[0]->A: hits = { {obj[0]->A, 1.84483, false}, {obj[0]->A, 2.14653, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 3.68967, false}, {obj[0]->A, 4.29307, true} }
+intersect test with obj[1]: hits = { {obj[1], 3.6914, false}, {obj[1], 4.29108, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->A, 3.68967, false}
+call Shade_Surface with: location = 0.237611 1.04722 0.318294; normal = 0.594027 0.118058 0.795735
+ambient = 0.06 0.06 0.24
+intersect test with obj[0]->A: hits = { }
+intersect test with obj[0]: hits = { }
+intersect test with obj[1]: hits = { }
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0.00729795 0.00729795 0.0291918; specular = 0 0 0
+intersect test with obj[0]->A: hits = { {obj[0]->A, 4.19109e-15, false}, {obj[0]->A, 0.0364137, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 8.38218e-15, false}, {obj[0]->A, 0.0728275, true} }
+intersect test with obj[1]: hits = { }
+closest intersection: return = obj[0]; hit = {obj[0]->A, 0.0728275, true}
+light 1 not visible; obscured by object obj[0] at location 0.271978 1.0964 0.27701
+final color 0.0672979 0.0672979 0.269192

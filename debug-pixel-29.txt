@@ -1,0 +1,57 @@
+debug pixel: x = 240; y = 350
+cast ray: end = 0.02 0.01 1; dir = -0.185895 0.222136 -0.95713
+no intersection with obj[3] part 0
+intersection with obj[1] part 0; dist = 1.15252
+closest intersection: obj = obj[1]; part = 0; dist = 1.15252
+call Shade_Surface with: location = -0.194248 0.266016 -0.103113; normal = -0.388496 -0.467968 0.793774
+ambient = 0 0 0
+no intersection with obj[3] part 0
+no intersection with obj[1] part 0
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0 0.270629 0; specular = 0 5.47095e-73 0
+no intersection with obj[3] part 0
+intersection with obj[1] part 0; dist = 0.313061
+closest intersection: obj = obj[1]; part = 0; dist = 0.313061
+light 1 not visible; obscured by object obj[1] at location -0.11679 0.556915 -0.0171742
+final color 0 0.270629 0
+cast ray: end = -0.194248 0.266016 -0.103113; dir = -0.800867 -0.518637 0.29938
+intersection with obj[0] part 10889; dist = 0.335002
+no intersection with obj[0] part 10890
+no intersection with obj[0] part 12262
+no intersection with obj[0] part 5730
+no intersection with obj[0] part 4033
+no intersection with obj[0] part 6392
+intersection with obj[0] part 6017; dist = 0.110634
+no intersection with obj[0] part 515
+no intersection with obj[0] part 8364
+intersection with obj[0] part 9860; dist = 0.318115
+no intersection with obj[0] part 6802
+no intersection with obj[0] part 3313
+intersection with obj[0] part 11740; dist = 0.299063
+no intersection with obj[0] part 12863
+intersection with obj[3] part 0; dist = 1.12992
+no intersection with obj[1] part 0
+closest intersection: obj = obj[0]; part = 6017; dist = 0.110634
+call Shade_Surface with: location = -0.282851 0.208637 -0.0699913; normal = 0.0661459 0.900628 -0.429527
+ambient = 0 0 0
+no intersection with obj[0] part 6392
+no intersection with obj[0] part 6017
+no intersection with obj[0] part 515
+no intersection with obj[0] part 748
+no intersection with obj[3] part 0
+no intersection with obj[1] part 0
+no intersection with obj[0] part 4304
+intersection with obj[0] part 4307; dist = 0.093128
+no intersection with obj[0] part 10952
+no intersection with obj[0] part 9641
+closest intersection: obj = obj[0]; part = 4307; dist = 0.093128
+light 0 not visible; obscured by object obj[0] at location -0.259139 0.221587 0.0191316
+no intersection with obj[0] part 6017
+no intersection with obj[0] part 515
+intersection with obj[2] part 0; dist = 0.122021
+no intersection with obj[3] part 0
+no intersection with obj[1] part 0
+closest intersection: obj = obj[2]; part = 0; dist = 0.122021
+light 1 not visible; obscured by object obj[2] at location -0.25051 0.321871 -0.0380347
+final color 0 0 0

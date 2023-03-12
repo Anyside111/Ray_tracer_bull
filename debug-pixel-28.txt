@@ -1,0 +1,11 @@
+debug pixel: x = 250; y = 260
+cast ray: end = 0.02 0.01 1; dir = -0.169927 0.0344272 -0.984855
+intersection with obj[0] part 505; dist = 1.17561
+no intersection with obj[0] part 3696
+no intersection with obj[0] part 1533
+intersection with obj[0] part 3771; dist = 0.852508
+closest intersection: obj = obj[0]; part = 3771; dist = 0.852508
+call Shade_Surface with: location = -0.124864 0.0393495 0.160403; normal = 0.175131 0.271319 0.946422
+ambient = 0 0 0
+shading for light 0: diffuse = 0.489516 0.489516 0.489516; specular = 0.00890384 0.00890384 0.00890384
+final color 0.49842 0.49842 0.49842

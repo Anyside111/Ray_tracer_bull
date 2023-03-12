@@ -1,0 +1,22 @@
+debug pixel: x = 380; y = 250
+cast ray: end = 0 1 6; dir = 0.131204 -0.140474 -0.981352
+intersection with obj[0] part 0; dist = 21.3563
+intersection with obj[1] part 0; dist = 5.72043
+closest intersection: obj = obj[1]; part = 0; dist = 5.72043
+call Shade_Surface with: location = 0.750543 0.196431 0.386246; normal = -0.498915 0.392861 0.772492
+ambient = 0 0 0
+no intersection with obj[0] part 0
+no intersection with obj[1] part 0
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0.256392 0 0; specular = 1.5535e-08 1.5535e-08 1.5535e-08
+no intersection with obj[0] part 0
+intersection with obj[2] part 0; dist = 0.668742
+no intersection with obj[1] part 0
+closest intersection: obj = obj[2]; part = 0; dist = 0.668742
+light 1 not visible; obscured by object obj[2] at location 0.330984 0.355718 0.882042
+intersection with obj[0] part 0; dist = 4.46884
+no intersection with obj[1] part 0
+closest intersection: obj = obj[0]; part = 0; dist = 4.46884
+light 2 not visible; obscured by object obj[0] at location 0.234806 -2 4.24374
+final color 0.256392 1.5535e-08 1.5535e-08

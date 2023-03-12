@@ -1,0 +1,20 @@
+debug pixel: x = 290; y = 390
+cast ray: end = 0 1 4; dir = -0.0611964 0.0729501 -0.995456
+torus polynomial coefficients = ( 311.062 -278.114 96.581 -15.6355 1 )
+torus polynomial complex roots = ( 3.82583 + 2.25162 i , 3.82583 + -2.25162 i , 3.60347 + 0 i , 4.38037 + 0 i )
+intersect test with obj[0]: hits = { {obj[0], 3.60347, false}, {obj[0], 4.38037, true} }
+closest intersection: return = obj[0]; hit = {obj[0], 3.60347, false}
+call Shade_Surface with: location = -0.22052 1.26287 0.412899; normal = -0.0970102 0.555558 0.825799
+ambient = 0.3 0 0
+torus polynomial coefficients = ( -3.37508e-14 4.30949 8.8415 5.32454 1 )
+torus polynomial complex roots = ( 7.88258e-15 + 0 i , -0.86411 + 0 i , -2.23021 + 0.115539 i , -2.23021 + -0.115539 i )
+intersect test with obj[0]: hits = { {obj[0], 0, false}, {obj[0], 7.88258e-15, true} }
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0.156348 0 0; specular = 0.115223 0.115223 0.115223
+torus polynomial coefficients = ( -3.37508e-14 -0.901497 3.17414 1.73377 1 )
+torus polynomial complex roots = ( -3.74423e-14 + 0 i , 0.246202 + 0 i , -0.989988 + 1.63754 i , -0.989988 + -1.63754 i )
+intersect test with obj[0]: hits = { {obj[0], 0, false}, {obj[0], 0.246202, true} }
+closest intersection: return = obj[0]; hit = {obj[0], 0.246202, true}
+light 1 not visible; obscured by object obj[0] at location -0.0883439 1.41625 0.272828
+final color 0.571571 0.115223 0.115223

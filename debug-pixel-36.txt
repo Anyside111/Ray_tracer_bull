@@ -1,0 +1,49 @@
+debug pixel: x = 250; y = 200
+cast ray: end = 2 3 4; dir = -0.478612 -0.619458 -0.622256
+intersect test with obj[0]->B: hits = { {obj[0]->B, 4.54369, false}, {obj[0]->B, 6.06555, true} }
+intersect test with obj[0]->A->B->B->B: hits = { {obj[0]->A->B->B->B, 3.22863, false} }
+intersect test with obj[0]->A->B->B->A: hits = { {obj[0]->A->B->B->A, 0, false}, {obj[0]->A->B->B->A, 6.45726, true} }
+intersect test with obj[0]->A->B->B: hits = { {obj[0]->A->B->B->B, 3.22863, false}, {obj[0]->A->B->B->A, 6.45726, true} }
+intersect test with obj[0]->A->B->A->B: hits = { {obj[0]->A->B->A->B, 2.08938, false} }
+intersect test with obj[0]->A->B->A->A: hits = { {obj[0]->A->B->A->A, 0, false}, {obj[0]->A->B->A->A, 6.26813, true} }
+intersect test with obj[0]->A->B->A: hits = { {obj[0]->A->B->A->B, 2.08938, false}, {obj[0]->A->B->A->A, 6.26813, true} }
+intersect test with obj[0]->A->B: hits = { {obj[0]->A->B->B->B, 3.22863, false}, {obj[0]->A->B->A->A, 6.26813, true} }
+intersect test with obj[0]->A->A->B: hits = { {obj[0]->A->A->B, 4.82117, false} }
+intersect test with obj[0]->A->A->A: hits = { {obj[0]->A->A->A, 0, false}, {obj[0]->A->A->A, 8.03528, true} }
+intersect test with obj[0]->A->A: hits = { {obj[0]->A->A->B, 4.82117, false}, {obj[0]->A->A->A, 8.03528, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A->A->B, 4.82117, false}, {obj[0]->A->B->A->A, 6.26813, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 6.06555, true}, {obj[0]->A->B->A->A, 6.26813, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 6.06555, true}
+call Shade_Surface with: location = -0.903042 -0.757355 0.225675; normal = 0.752535 0.631129 -0.188063
+ambient = 0.06 0.06 0.24
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 0.843419, true} }
+intersect test with obj[0]->A->B->B->B: hits = { {obj[0]->A->B->B->B, 0, false}, {obj[0]->A->B->B->B, 4.99207, true} }
+intersect test with obj[0]->A->B->B->A: hits = { {obj[0]->A->B->B->A, 0, false} }
+intersect test with obj[0]->A->B->B: hits = { {obj[0]->A->B->B->A, 0, false}, {obj[0]->A->B->B->B, 4.99207, true} }
+intersect test with obj[0]->A->B->A->B: hits = { {obj[0]->A->B->A->B, 0, false}, {obj[0]->A->B->A->B, 4.94347, true} }
+intersect test with obj[0]->A->B->A->A: hits = { {obj[0]->A->B->A->A, 0, false} }
+intersect test with obj[0]->A->B->A: hits = { {obj[0]->A->B->A->A, 0, false}, {obj[0]->A->B->A->B, 4.94347, true} }
+intersect test with obj[0]->A->B: hits = { {obj[0]->A->B->A->A, 0, false}, {obj[0]->A->B->A->B, 4.94347, true} }
+intersect test with obj[0]->A->A->B: hits = { {obj[0]->A->A->B, 0, false}, {obj[0]->A->A->B, 0.907597, true} }
+intersect test with obj[0]->A->A->A: hits = { {obj[0]->A->A->A, 0, false} }
+intersect test with obj[0]->A->A: hits = { {obj[0]->A->A->A, 0, false}, {obj[0]->A->A->B, 0.907597, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A->A->A, 0, false}, {obj[0]->A->A->B, 0.907597, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 0.843419, true}, {obj[0]->A->A->B, 0.907597, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 0.843419, true}
+light 0 not visible; obscured by object obj[0] at location -0.578359 -0.460447 0.945246
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 1.05535, true} }
+intersect test with obj[0]->A->B->B->B: hits = { {obj[0]->A->B->B->B, 0, false}, {obj[0]->A->B->B->B, 2.53288, true} }
+intersect test with obj[0]->A->B->B->A: hits = { {obj[0]->A->B->B->A, 0, false} }
+intersect test with obj[0]->A->B->B: hits = { {obj[0]->A->B->B->A, 0, false}, {obj[0]->A->B->B->B, 2.53288, true} }
+intersect test with obj[0]->A->B->A->B: hits = { {obj[0]->A->B->A->B, 0, false}, {obj[0]->A->B->A->B, 10.7576, true} }
+intersect test with obj[0]->A->B->A->A: hits = { {obj[0]->A->B->A->A, 0, false} }
+intersect test with obj[0]->A->B->A: hits = { {obj[0]->A->B->A->A, 0, false}, {obj[0]->A->B->A->B, 10.7576, true} }
+intersect test with obj[0]->A->B: hits = { {obj[0]->A->B->A->A, 0, false}, {obj[0]->A->B->B->B, 2.53288, true} }
+intersect test with obj[0]->A->A->B: hits = { {obj[0]->A->A->B, 0, false}, {obj[0]->A->A->B, 1.10921, true} }
+intersect test with obj[0]->A->A->A: hits = { {obj[0]->A->A->A, 0, false} }
+intersect test with obj[0]->A->A: hits = { {obj[0]->A->A->A, 0, false}, {obj[0]->A->A->B, 1.10921, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A->A->A, 0, false}, {obj[0]->A->A->B, 1.10921, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 1.05535, true}, {obj[0]->A->A->B, 1.10921, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 1.05535, true}
+light 1 not visible; obscured by object obj[0] at location -0.716349 -0.0251365 0.9624
+final color 0.06 0.06 0.24

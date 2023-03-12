@@ -1,0 +1,37 @@
+debug pixel: x = 300; y = 250
+cast ray: end = 0 1 4; dir = -0.0426189 -0.219988 -0.974571
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0.838073, false}, {obj[0]->A, 1.51875, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 1.84376, false}, {obj[0]->A, 3.34126, true} }
+intersect test with obj[1]->A->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.838349, false}, {obj[1]->A->A->A->A->A->A, 1.52765, true} }
+intersect test with obj[1]->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.838349, false}, {obj[1]->A->A->A->A->A->A, 1.52765, true} }
+intersect test with obj[1]->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 1.6767, false}, {obj[1]->A->A->A->A->A->A, 3.0553, true} }
+intersect test with obj[1]->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 1.6767, false}, {obj[1]->A->A->A->A->A->A, 3.0553, true} }
+intersect test with obj[1]->A->A: hits = { {obj[1]->A->A->A->A->A->A, 1.6767, false}, {obj[1]->A->A->A->A->A->A, 3.0553, true} }
+intersect test with obj[1]->A: hits = { {obj[1]->A->A->A->A->A->A, 1.84437, false}, {obj[1]->A->A->A->A->A->A, 3.36083, true} }
+intersect test with obj[1]: hits = { {obj[1]->A->A->A->A->A->A, 1.84437, false}, {obj[1]->A->A->A->A->A->A, 3.36083, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->A, 1.84376, false}
+call Shade_Surface with: location = -0.078579 0.594395 2.20312; normal = 0.503606 -0.0505993 0.86245
+ambient = 0.3 0 0
+intersect test with obj[0]->A: hits = { {obj[0]->A, 1.1588e-15, false}, {obj[0]->A, 0.0718044, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 2.54935e-15, false}, {obj[0]->A, 0.15797, true} }
+intersect test with obj[1]->A->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00301626, false}, {obj[1]->A->A->A->A->A->A, 0.0630855, true} }
+intersect test with obj[1]->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00301626, false}, {obj[1]->A->A->A->A->A->A, 0.0630855, true} }
+intersect test with obj[1]->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00603253, false}, {obj[1]->A->A->A->A->A->A, 0.126171, true} }
+intersect test with obj[1]->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00603253, false}, {obj[1]->A->A->A->A->A->A, 0.126171, true} }
+intersect test with obj[1]->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00603253, false}, {obj[1]->A->A->A->A->A->A, 0.126171, true} }
+intersect test with obj[1]->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00663578, false}, {obj[1]->A->A->A->A->A->A, 0.138788, true} }
+intersect test with obj[1]: hits = { {obj[1]->A->A->A->A->A->A, 0.00663578, false}, {obj[1]->A->A->A->A->A->A, 0.138788, true} }
+closest intersection: return = obj[1]; hit = {obj[1]->A->A->A->A->A->A, 0.00663578, false}
+light 0 not visible; obscured by object obj[1] at location -0.0804721 0.600706 2.20391
+intersect test with obj[0]->A: hits = { {obj[0]->A, 2.498e-16, false}, {obj[0]->A, 0.337937, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 5.4956e-16, false}, {obj[0]->A, 0.743461, true} }
+intersect test with obj[1]->A->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.000540811, false}, {obj[1]->A->A->A->A->A->A, 0.351847, true} }
+intersect test with obj[1]->A->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.000540811, false}, {obj[1]->A->A->A->A->A->A, 0.351847, true} }
+intersect test with obj[1]->A->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00108162, false}, {obj[1]->A->A->A->A->A->A, 0.703694, true} }
+intersect test with obj[1]->A->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00108162, false}, {obj[1]->A->A->A->A->A->A, 0.703694, true} }
+intersect test with obj[1]->A->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00108162, false}, {obj[1]->A->A->A->A->A->A, 0.703694, true} }
+intersect test with obj[1]->A: hits = { {obj[1]->A->A->A->A->A->A, 0.00118978, false}, {obj[1]->A->A->A->A->A->A, 0.774064, true} }
+intersect test with obj[1]: hits = { {obj[1]->A->A->A->A->A->A, 0.00118978, false}, {obj[1]->A->A->A->A->A->A, 0.774064, true} }
+closest intersection: return = obj[1]; hit = {obj[1]->A->A->A->A->A->A, 0.00118978, false}
+light 1 not visible; obscured by object obj[1] at location -0.0780894 0.595096 2.2023
+final color 0.3 0 0

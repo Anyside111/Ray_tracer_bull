@@ -1,0 +1,46 @@
+debug pixel: x = 340; y = 265
+cast ray: end = 0 1 4; dir = 0.0447425 -0.187923 -0.981164
+intersect test with obj[1]: hits = { {obj[1], 5.40695, false}, {obj[1], 5.7796, true} }
+intersect test with obj[2]->A->B->B: hits = { {obj[2]->A->B->B, 4.83466, false} }
+intersect test with obj[2]->A->B->A: hits = { {obj[2]->A->B->A, 3.13298, false}, {obj[2]->A->B->A, 10.9792, true} }
+intersect test with obj[2]->A->B: hits = { {obj[2]->A->B->A, 3.13298, false}, {obj[2]->A->B->B, 4.83466, false} }
+intersect test with obj[2]->A->A->B: hits = { {obj[2]->A->A->B, 3.15691, false}, {obj[2]->A->A->B, 5.06825, true} }
+intersect test with obj[2]->A->A->A->B: hits = { {obj[2]->A->A->A->B, 6.16829, false}, {obj[2]->A->A->A->B, 7.94385, true} }
+intersect test with obj[2]->A->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A: hits = { {obj[2]->A->A->A->B, 6.16829, false}, {obj[2]->A->A->A->B, 7.94385, true} }
+intersect test with obj[2]->A->A: hits = { {obj[2]->A->A->B, 3.15691, false}, {obj[2]->A->A->B, 5.06825, true}, {obj[2]->A->A->A->B, 6.16829, false}, {obj[2]->A->A->A->B, 7.94385, true} }
+intersect test with obj[2]->A: hits = { {obj[2]->A->B->B, 4.83466, false}, {obj[2]->A->A->B, 5.06825, true}, {obj[2]->A->A->A->B, 6.16829, false}, {obj[2]->A->A->A->B, 7.94385, true} }
+intersect test with obj[2]: hits = { {obj[2]->A->B->B, 4.83466, false}, {obj[2]->A->A->B, 5.06825, true}, {obj[2]->A->A->A->B, 6.16829, false}, {obj[2]->A->A->A->B, 7.94385, true} }
+closest intersection: return = obj[2]; hit = {obj[2]->A->B->B, 4.83466, false}
+call Shade_Surface with: location = 0.216315 0.0914565 -0.743598; normal = -0.389418 0.921061 0
+ambient = 0.3 0 0
+intersect test with obj[2]->A->B->B: hits = { }
+intersect test with obj[2]->A->B->A: hits = { {obj[2]->A->B->A, 0, false}, {obj[2]->A->B->A, 2.34749, true} }
+intersect test with obj[2]->A->B: hits = { {obj[2]->A->B->A, 0, false}, {obj[2]->A->B->A, 2.34749, true} }
+intersect test with obj[2]->A->A->B: hits = { {obj[2]->A->A->B, 0, false}, {obj[2]->A->A->B, 1.02642, true} }
+intersect test with obj[2]->A->A->A->B: hits = { }
+intersect test with obj[2]->A->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A: hits = { }
+intersect test with obj[2]->A->A: hits = { {obj[2]->A->A->B, 0, false}, {obj[2]->A->A->B, 1.02642, true} }
+intersect test with obj[2]->A: hits = { }
+intersect test with obj[2]: hits = { }
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0.105672 0 0; specular = 0 0 0
+intersect test with obj[2]->A->B->B: hits = { }
+intersect test with obj[2]->A->B->A: hits = { {obj[2]->A->B->A, 0, false}, {obj[2]->A->B->A, 3.96602, true} }
+intersect test with obj[2]->A->B: hits = { {obj[2]->A->B->A, 0, false}, {obj[2]->A->B->A, 3.96602, true} }
+intersect test with obj[2]->A->A->B: hits = { {obj[2]->A->A->B, 0, false}, {obj[2]->A->A->B, 0.32138, true} }
+intersect test with obj[2]->A->A->A->B: hits = { }
+intersect test with obj[2]->A->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A->A: hits = { }
+intersect test with obj[2]->A->A->A: hits = { }
+intersect test with obj[2]->A->A: hits = { {obj[2]->A->A->B, 0, false}, {obj[2]->A->A->B, 0.32138, true} }
+intersect test with obj[2]->A: hits = { }
+intersect test with obj[2]: hits = { }
+closest intersection: none
+light 1 visible; no object on ray.
+shading for light 1: diffuse = 0.121853 0 0; specular = 8.33609e-19 8.33609e-19 8.33609e-19
+final color 0.527525 8.33609e-19 8.33609e-19

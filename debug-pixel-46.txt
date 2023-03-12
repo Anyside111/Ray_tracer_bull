@@ -1,0 +1,26 @@
+debug pixel: x = 350; y = 250
+cast ray: end = 0 0.1 3.8; dir = 0.0665729 -0.00333079 -0.997776
+intersect test with obj[0]->B: hits = { {obj[0]->B, 1.80987, false}, {obj[0]->B, 5.77389, true} }
+torus polynomial coefficients = ( -12.7775 12.5637 9.40738 -7.18532 1 )
+torus polynomial complex roots = ( -1.19618 + 0 i , 0.798434 + 0 i , 2.79297 + 0 i , 4.7901 + 0 i )
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 0.798434, true}, {obj[0]->A, 2.79297, false}, {obj[0]->A, 4.7901, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 2.79297, false}, {obj[0]->A, 4.7901, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->A, 2.79297, false}
+call Shade_Surface with: location = 0.185936 0.0906972 1.01324; normal = -0.18441 0.0906972 0.978656
+ambient = 0.3 0 0
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 1.44028, true} }
+torus polynomial coefficients = ( 2.13163e-14 6.35884 5.77499 -0.926364 1 )
+torus polynomial complex roots = ( -3.33067e-15 + 0 i , -0.867402 + 0 i , 0.896883 + 2.5547 i , 0.896883 + -2.5547 i )
+intersect test with obj[0]->A: hits = { }
+intersect test with obj[0]: hits = { }
+closest intersection: none
+light 0 visible; no object on ray.
+shading for light 0: diffuse = 0.0557815 0 0; specular = 8.98157e-17 8.98157e-17 8.98157e-17
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 2.21572, true} }
+torus polynomial coefficients = ( 2.13163e-14 -9.26642 2.06457 2.84178 1 )
+torus polynomial complex roots = ( 2.44249e-15 + 0 i , 1.27089 + 0 i , -2.05634 + 1.75008 i , -2.05634 + -1.75008 i )
+intersect test with obj[0]->A: hits = { {obj[0]->A, 2.44249e-15, false}, {obj[0]->A, 1.27089, true} }
+intersect test with obj[0]: hits = { {obj[0]->A, 2.44249e-15, false}, {obj[0]->A, 1.27089, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->A, 1.27089, true}
+light 1 not visible; obscured by object obj[0] at location 0.70146 0.99006 0.278035
+final color 0.355782 8.98157e-17 8.98157e-17

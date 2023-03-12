@@ -1,0 +1,58 @@
+debug pixel: x = 365; y = 280
+cast ray: end = 2 2 4; dir = -0.270882 -0.444009 -0.854096
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.79443, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.2992, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.79443, true}, {obj[0]->A, 10.2992, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.79443, true}
+call Shade_Surface with: location = -0.653129 -2.34881 -4.36538; normal = 0.130626 0.469762 0.873075
+ambient = 0.1 0.1 0.1
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.82711, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.3351, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.82711, true}, {obj[0]->A, 10.3351, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.82711, true}
+light 0 visible; closest object on ray too far away (light dist = 8.09837; object dist = 9.82711)
+shading for light 0: diffuse = 0.11924 0.11924 0.11924; specular = 0.100773 0.100773 0.100773
+final color 0.320012 0.320012 0.320012
+cast ray: end = -0.653129 -2.34881 -4.36538; dir = -0.0123332 0.485794 0.873986
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.89652, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.4013, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.89652, true}, {obj[0]->A, 10.4013, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.89652, true}
+call Shade_Surface with: location = -0.775185 2.45886 4.28405; normal = 0.155037 -0.491772 -0.85681
+ambient = 0.1 0.1 0.1
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.11233, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 9.65603, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.11233, true}, {obj[0]->A, 9.65603, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.11233, true}
+light 0 visible; closest object on ray too far away (light dist = 1.95643; object dist = 9.11233)
+shading for light 0: diffuse = 1.89449 1.89449 1.89449; specular = 0.00187451 0.00187451 0.00187451
+final color 1.99637 1.99637 1.99637
+cast ray: end = -0.775185 2.45886 4.28405; dir = 0.294532 -0.487573 -0.821903
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.89652, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.4013, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.89652, true}, {obj[0]->A, 10.4013, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.89652, true}
+call Shade_Surface with: location = 2.13966 -2.36641 -3.84993; normal = -0.427932 0.473283 0.769985
+ambient = 0.1 0.1 0.1
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.94934, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.4517, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.94934, true}, {obj[0]->A, 10.4517, true} }
+closest intersection: return = obj[0]; hit = {obj[0]->B, 9.94934, true}
+light 0 visible; closest object on ray too far away (light dist = 8.25298; object dist = 9.94934)
+shading for light 0: diffuse = 0.116242 0.116242 0.116242; specular = 0.0349867 0.0349867 0.0349867
+final color 0.251229 0.251229 0.251229
+cast ray: end = 2.13966 -2.36641 -3.84993; dir = -0.552476 0.449199 0.702133
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 9.89652, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 10.4013, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 9.89652, true}, {obj[0]->A, 10.4013, true} }
+intersect test with obj[2]: hits = { {obj[2], 5.36363, false}, {obj[2], 5.63785, true} }
+closest intersection: return = obj[2]; hit = {obj[2], 5.36363, false}
+call Shade_Surface with: location = -0.823616 0.0429211 -0.0839436; normal = 0.881919 0.214606 -0.419718
+ambient = 0.02 0.02 0.08
+intersect test with obj[0]->B: hits = { {obj[0]->B, 0, false}, {obj[0]->B, 4.95328, true} }
+intersect test with obj[0]->A: hits = { {obj[0]->A, 0, false}, {obj[0]->A, 5.45964, true} }
+intersect test with obj[0]: hits = { {obj[0]->B, 4.95328, true}, {obj[0]->A, 5.45964, true} }
+intersect test with obj[2]: hits = { {obj[2], 4.59771e-14, false}, {obj[2], 0.15394, true} }
+closest intersection: return = obj[2]; hit = {obj[2], 0.15394, true}
+light 0 not visible; obscured by object obj[2] at location -0.832013 0.0884806 0.0628601
+final color 0.02 0.02 0.08
