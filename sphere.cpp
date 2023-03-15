@@ -9,9 +9,9 @@ Hit Sphere::Intersection(const Ray& ray, int part) const
     double B = 2.0 * dot(ray.direction,oc);
     double C = dot(oc,oc) - radius*radius;
     double equation = B*B -4.0*A*C;
-    double dist=0;
+    double dist;
     if (equation < 0) {
-        dist = -1.0;
+        dist = 10e5;
     } else {
         dist = (-B - sqrt(equation) ) / (2.0*A);
     }

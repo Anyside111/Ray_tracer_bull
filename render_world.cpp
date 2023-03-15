@@ -19,8 +19,18 @@ Render_World::~Render_World() {
 // Find and return the Hit structure for the closest intersection.  Be careful
 // to ensure that hit.dist>=small_t.
 Hit Render_World::Closest_Intersection(const Ray &ray) {
-    TODO;
-    return {};
+    vec3 color;
+    double distance = 10e5;
+    int idx = 0;
+    for (int i = 0; i < this->objects.size(); i++) {
+        auto object = objects[i];
+        Hit hit = object->Intersection(ray, 0);
+        if (hit.dist < distance) {
+            distance = hit.dist;
+            idx = i;
+        }
+    }
+    return {objects[idx], distance, 0};
 }
 
 // set up the initial view ray and call
@@ -51,16 +61,15 @@ void Render_World::Render() {
 // or the background color if there is no object intersection
 vec3 Render_World::Cast_Ray(const Ray &ray, int recursion_depth) {
     vec3 color;
-    for (int i = 0; i < this->objects.size(); i++) {
-        auto object = objects[i];
-        Hit hit = object->Intersection(ray, 0);
-        if (hit.dist >= 0) {
-            vec3 intersection_point = ray.endpoint + hit.dist * ray.direction;
-            vec3 normal = object->Normal(intersection_point, 0);
-            color = object->material_shader->Shade_Surface(ray, intersection_point, normal, recursion_depth);
-        } else {
-            color = this->background_shader->Shade_Surface(ray, {0, 0, 0}, {0, 0, 0}, recursion_depth);
-        }
+
+    Hit hit = Closest_Intersection(ray);
+    auto object = hit.object;
+    if (hit.dist < 10e5) {
+        vec3 intersection_point = ray.endpoint + hit.dist * ray.direction;
+        vec3 normal = object->Normal(intersection_point, 0);
+        color = object->material_shader->Shade_Surface(ray, intersection_point, normal, recursion_depth);
+    } else {
+        color = this->background_shader->Shade_Surface(ray, {0, 0, 0}, {0, 0, 0}, recursion_depth);
     }
     return color;
 }
