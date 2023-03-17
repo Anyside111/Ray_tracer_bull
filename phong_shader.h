@@ -3,23 +3,27 @@
 
 #include "shader.h"
 
-class Phong_Shader : public Shader
-{
+class Phong_Shader : public Shader {
 public:
-    vec3 color_ambient,color_diffuse,color_specular;
+    vec3 color_ambient, color_diffuse, color_specular;
     double specular_power;
 
-    Phong_Shader(Render_World& world_input,
-        const vec3& color_ambient,
-        const vec3& color_diffuse,
-        const vec3& color_specular,
-        double specular_power)
-        :Shader(world_input),color_ambient(color_ambient),
-        color_diffuse(color_diffuse),color_specular(color_specular),
-        specular_power(specular_power)
-    {}
+    Phong_Shader(Render_World &world_input,
+                 const vec3 &color_ambient,
+                 const vec3 &color_diffuse,
+                 const vec3 &color_specular,
+                 double specular_power)
+            : Shader(world_input), color_ambient(color_ambient),
+              color_diffuse(color_diffuse), color_specular(color_specular),
+              specular_power(specular_power) {}
+
+    double Shadow_Calcu(const vec3 &intersection_point,
+                        const vec3 lightDir) const;
 
     virtual vec3 Shade_Surface(const Ray& ray,const vec3& intersection_point,
-        const vec3& normal,int recursion_depth) const override;
+                               const vec3& normal,int recursion_depth) const override;
+
+
 };
+
 #endif

@@ -19,7 +19,6 @@ Render_World::~Render_World() {
 // Find and return the Hit structure for the closest intersection.  Be careful
 // to ensure that hit.dist>=small_t.
 Hit Render_World::Closest_Intersection(const Ray &ray) {
-    vec3 color;
     double distance = 10e5;
     int idx = 0;
     for (int i = 0; i < this->objects.size(); i++) {
