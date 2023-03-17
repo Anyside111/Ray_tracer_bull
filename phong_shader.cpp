@@ -24,9 +24,9 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
 
         double p = this->specular_power;
         vec3 viewDir = (this->world.camera.position - intersection_point).normalized();
-        vec3 halfwayDir = (lightDir_n + viewDir).normalized();
-        //vec3 reflectDir = -lightDir - 2.0 * dot(-lightDir, norm) * norm;
-        c_specular += ifShadow * incident * pow(fmax(dot(halfwayDir, norm), 0), p) * color_specular / light_attenuation;
+        // vec3 halfwayDir = (lightDir_n + viewDir).normalized();
+        vec3 reflectDir = -lightDir_n - 2.0 * dot(-lightDir_n, norm) * norm;
+        c_specular += ifShadow * incident * pow(fmax(dot(reflectDir, viewDir), 0), p) * color_specular / light_attenuation;
     }
     //4*p fit to 20.txt
     color = c_ambient + c_diffuse + c_specular;
