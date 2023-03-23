@@ -10,6 +10,9 @@ class Box
 public:
     // lowermost and uppermost corners of bounding box
     vec3 lo,hi;
+//    Box() : lo(0), hi(0) {} //this statement cause error of assertion vec1
+//    Box(const vec3& lo, const vec3& hi) : lo(lo), hi(hi) {}
+
 
     // Return whether the ray intersects this box.
     bool Intersection(const Ray& ray) const;

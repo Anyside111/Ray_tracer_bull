@@ -11,12 +11,12 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
     if (recursion_depth < world.recursion_depth_limit) {// Calculate the reflection ray direction
         vec3 reflect_dir = ray.direction - 2 * dot(ray.direction, normal) * normal;
         reflect_dir = reflect_dir.normalized();
-        // Check if the reflection ray intersects with any object in the scene
+        // Check if the reflection ray intersects with any object in the scene,follow the reflection point and call for Shade_Surface recursively
         Ray reflection_ray(intersection_point + reflect_dir * 0.01, reflect_dir);
         Hit reflection_hit = world.Closest_Intersection(reflection_ray);
         if (reflection_hit.dist < 10e5) {
             vec3 reflection_point = reflection_ray.Point(reflection_hit.dist);
-            vec3 reflection_normal = reflection_hit.object->Normal(reflection_point, 0);// hit object normal
+            vec3 reflection_normal = reflection_hit.object->Normal(reflection_point, 0);//normal of hit object
             reflection_color = reflection_hit.object->material_shader->Shade_Surface(reflection_ray, reflection_point,
                                                                                     reflection_normal,
                                                                                     recursion_depth + 1);
