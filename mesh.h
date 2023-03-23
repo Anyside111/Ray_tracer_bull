@@ -22,5 +22,7 @@ public:
     bool Intersect_Triangle(const Ray& ray, int tri, double& dist) const;
     void Read_Obj(const char* file);
     Box Bounding_Box(int part) const override;
+
+    vec3 Barycentric(const vec3 &p, const vec3 &a, const vec3 &b, const vec3 &c) const;
 };
 #endif

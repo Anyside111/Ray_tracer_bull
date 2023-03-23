@@ -10,10 +10,9 @@
 Hit Plane::Intersection(const Ray &ray, int part) const {
     double dom = dot(ray.direction, normal);
     double distance = 10e5;
-    if (dom < 10e-5) {
+    if (dom < 10e-8) {
         distance = dot((x1 - ray.endpoint), normal) / dom;
     }
-
     return {0, distance, 0};
 }
 
