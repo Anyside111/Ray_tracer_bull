@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <limits>
-#include <algorithm>
+
 
 // Consider a triangle to intersect a ray if the ray intersects the plane of the
 // triangle with barycentric weights in [-weight_tolerance, 1+weight_tolerance]
@@ -41,26 +41,16 @@ void Mesh::Read_Obj(const char *file) {
 //iterate over every boxes?
 Hit Mesh::Intersection(const Ray &ray, int part) const {
     assert(part >= 0 && part < triangles.size());// assert(part<0), intersect against all parts.
-    std::vector<Hit> hits; // create a vector to store all hits
     double dist;
-    for (int i = 0; i < 3; i++) {
-        int tri = triangles[part][i];
-        if (Intersect_Triangle(ray, tri, dist)) {
-            // intersection point inside :Compute the distance from the origin of the ray to the point of intersection
-            vec3 inter_point = ray.Point(dist);//use this dist to compute the intersection point
-            double hit_dist = (inter_point - ray.endpoint).magnitude();
-            hits.push_back({this, hit_dist, part});
-        }
+    Hit hit;
+    if (Intersect_Triangle(ray, part, dist)) {
+        // intersection point inside :Compute the distance from the origin of the ray to the point of intersection
+        vec3 inter_point = ray.Point(dist);//use this dist to compute the intersection point
+        double hit_dist = (inter_point - ray.endpoint).magnitude();
+        hit = {this, hit_dist, part};
+        return hit;
     }
-    if (hits.size() == 0) {
-        return {nullptr, 0, 0};
-    } else {
-        std::sort(hits.begin(), hits.end(), [](const Hit &a, const Hit &b) {
-            return a.dist < b.dist; // sort hits by distance ascending
-        });
-        return hits[0];// closest hit
-    }
-
+    return {nullptr, 0, 0};
 }
 
 vec3 Mesh::Barycentric(const vec3 &p, const vec3 &a, const vec3 &b, const vec3 &c) const {
@@ -72,9 +62,9 @@ vec3 Mesh::Barycentric(const vec3 &p, const vec3 &a, const vec3 &b, const vec3 &
     const auto d11 = dot(v1, v1);
     const auto d20 = dot(v2, v0);
     const auto d21 = dot(v2, v1);
-    const auto denom = d00 * d11 - d01 * d01;
-    const auto v = (d11 * d20 - d01 * d21) / denom;
-    const auto w = (d00 * d21 - d01 * d20) / denom;
+    const auto dom = d00 * d11 - d01 * d01;
+    const auto v = (d11 * d20 - d01 * d21) / dom;
+    const auto w = (d00 * d21 - d01 * d20) / dom;
     const auto u = 1.0f - v - w;
     return {u, v, w};
 }
@@ -106,7 +96,7 @@ vec3 Mesh::Normal(const vec3 &point, int part) const {
 //an integer tri which represents the index of the triangle in the Mesh object's triangles vector
 bool Mesh::Intersect_Triangle(const Ray &ray, int tri, double &dist) const {
     const auto &vertices = this->vertices;// all vertices read from file
-    const auto &indices = this->triangles[tri]; // indices of the vertices of the triangle
+    const auto &indices = this->triangles[tri]; // indices of the vertices of the specified triangle[tri]
 
     // Compute the normal of the triangle
     vec3 v0 = vertices[indices[0]];
@@ -122,7 +112,7 @@ bool Mesh::Intersect_Triangle(const Ray &ray, int tri, double &dist) const {
     }
     double tmp_dist = dot(v0 - ray.endpoint, normal) / dom;
 
-    if (tmp_dist < small_t) {
+    if (tmp_dist <= small_t) {
         // Intersection point is behind the ray origin
         return false;
     }

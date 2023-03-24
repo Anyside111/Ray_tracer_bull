@@ -16,7 +16,7 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
         Hit reflection_hit = world.Closest_Intersection(reflection_ray);
         if (reflection_hit.dist < 10e5) {
             vec3 reflection_point = reflection_ray.Point(reflection_hit.dist);
-            vec3 reflection_normal = reflection_hit.object->Normal(reflection_point, 0);//normal of hit object
+            vec3 reflection_normal = reflection_hit.object->Normal(reflection_point, reflection_hit.part);//normal of hit object
             reflection_color = reflection_hit.object->material_shader->Shade_Surface(reflection_ray, reflection_point,
                                                                                     reflection_normal,
                                                                                     recursion_depth + 1);

@@ -10,7 +10,7 @@ static const double weight_tol = 1e-4;
 class Mesh : public Object
 {
     std::vector<vec3> vertices;
-    std::vector<ivec3> triangles;
+    std::vector<ivec3> triangles;//store the index of the vertices of the triangle
     Box box;
     
 public:

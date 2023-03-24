@@ -16,8 +16,10 @@ Shade_Surface(const Ray &ray, const vec3 &intersection_point,
         vec3 lightDir = this->world.lights[i]->position - intersection_point;
         vec3 lightDir_n = lightDir.normalized();
         vec3 norm = normal.normalized();
+        bool enable_shadows = this->world.enable_shadows;
         double ifShadow;
         ifShadow = Shadow_Calcu(intersection_point,lightDir);
+        if(!enable_shadows){ifShadow = 1;}
         double light_attenuation =
                 4 * M_PI * lightDir.magnitude_squared();
         c_diffuse += ifShadow * incident * fmax(0, dot(lightDir_n, norm)) * color_diffuse / light_attenuation;

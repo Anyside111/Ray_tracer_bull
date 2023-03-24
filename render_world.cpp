@@ -20,16 +20,38 @@ Render_World::~Render_World() {
 // to ensure that hit.dist>=small_t.
 Hit Render_World::Closest_Intersection(const Ray &ray) {
     double distance = 10e5;
-    int idx = 0;
+    int idx = -1;
+    int idx_part;
     for (int i = 0; i < this->objects.size(); i++) {
         auto object = objects[i];
-        Hit hit = object->Intersection(ray, 0);
-        if (hit.dist < distance) {
-            distance = hit.dist;
-            idx = i;
+        //modify the part by determing the object type
+        if (object->number_parts <= 1) {
+            Hit hit = object->Intersection(ray, 0);
+            if (hit.dist < distance && hit.dist >= small_t) {
+                distance = hit.dist;
+                idx = i;
+            }
+        } else {
+            for (int j = 0; j < object->number_parts; j++) {
+                Hit hit = object->Intersection(ray, j);
+                if (hit.dist >= small_t && hit.dist < distance) {
+                    distance = hit.dist;
+                    idx = i;
+                    idx_part = j;
+                }
+            }
         }
     }
-    return {objects[idx], distance, 0};
+    if (idx == -1) {
+        return {0, 0, 0};
+    } else {
+        auto object = objects[idx];
+        if (object->number_parts <= 1) {
+            return {object, distance, 0};
+        } else {
+            return {object, distance, idx_part};
+        }
+    }
 }
 
 // set up the initial view ray and call
@@ -60,12 +82,13 @@ void Render_World::Render() {
 // or the background color if there is no object intersection
 vec3 Render_World::Cast_Ray(const Ray &ray, int recursion_depth) {
     vec3 color;
-
     Hit hit = Closest_Intersection(ray);
     auto object = hit.object;
-    if (hit.dist < 10e5) {
+    if (hit.object and hit.dist < 10e5) {
         vec3 intersection_point = ray.endpoint + hit.dist * ray.direction;
-        vec3 normal = object->Normal(intersection_point, 0);
+        vec3 normal;
+        //no need to modify the part by determing the object type; because it is already done in Closest_Intersection
+        normal = object->Normal(intersection_point, hit.part);
         color = object->material_shader->Shade_Surface(ray, intersection_point, normal, recursion_depth);
     } else {
         color = this->background_shader->Shade_Surface(ray, {0, 0, 0}, {0, 0, 0}, recursion_depth);
